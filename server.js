@@ -20,12 +20,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 const botName = 'ChatCord Bot';
 
 
-   try {
+   
     
   // Run when client connects
 
 
 io.on('connection', socket => {
+  try {
   socket.on('joinRoom', ({ username, room }) => {
     const user = userJoin(socket.id, username, room);
 
@@ -48,16 +49,27 @@ io.on('connection', socket => {
       users: getRoomUsers(user.room)
     });
   });
-
+  
+  } catch (error) {
+    console.log(error);
+  }
+  
   // Listen for chatMessage
   socket.on('chatMessage', msg => {
+   try {
     const user = getCurrentUser(socket.id);
 
     io.to(user.room).emit('message', formatMessage(user.username, msg));
-  });
+ 
+   } catch (error) {
+     console.log(error);
+   } 
+      });
 
   // Runs when client disconnects
   socket.on('disconnect', () => {
+   
+   try {
     const user = userLeave(socket.id);
 
     if (user) {
@@ -71,14 +83,16 @@ io.on('connection', socket => {
         room: user.room,
         users: getRoomUsers(user.room)
       });
-    }
+    } 
+   } catch (error) {
+     console.log(error);
+   }
+    
   });
 });
     
     
-   } catch (error) {
-      console.log(error)     
-   }
+   
 
 
 
