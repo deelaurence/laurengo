@@ -21,7 +21,16 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Laurengo</title>
   </head>
-  <body>
+  <body
+    style="
+      background-image: url(remote.png);
+
+      background-size: 10rem;
+      background-repeat: no-repeat;
+      background-position: 100% 110%;
+      overflow: hidden;
+    "
+  >
     <div class="design-container-parent">
       <div class="line1">
         <div class="box1"></div>
@@ -62,9 +71,7 @@
         <div class="box2"></div>
       </div>
       <div class="line7">
-        <div class="box1" style="position: relative">
-          <div class="horizontal-line"></div>
-        </div>
+        <div class="box1" style="position: relative"></div>
       </div>
     </div>
 
@@ -73,14 +80,15 @@
         <h1><i class="fab fa-cloudsmith"></i>Lauren<span>go</span></h1>
       </header>
       <div class="hero-text">
-        <p>Enter your name and your chatroom..</p>
+        <p id="herotext">hi!, choose a chatroom..</p>
       </div>
       <main class="join-main">
-        <form action="chat.html">
+        <form>
           <div class="form-control">
             <label for="username"></label>
             <input
               type="text"
+              onkeypress="playPad()"
               name="username"
               id="username"
               placeholder="What's your name?"
@@ -90,19 +98,35 @@
           <div class="form-control">
             <label for="room"></label>
             <select name="room" id="room">
-              <option value="JavaScript">
-                <i class="fab fa-cloudsmith"></i>🙊 Gossip
+              <option value="Gossip">🙊 Gossip</option>
+              <option value="Politics">👥 Politics</option>
+              <option value="Sports">🏀 Sports</option>
+              <option value="Hot gists">🌶 Hot gists</option>
+              <option value="General">🔗 General</option>
+              <option value="Travel">
+                <span class="travel">✈</span> Travel
               </option>
-              <option value="Python">👥 Politics</option>
-              <option value="PHP">🏀 Sports</option>
-              <option value="C#">🌶 Hot gists</option>
-              <option value="Ruby">🔗 General</option>
-              <option value="Java"><span class="travel">✈</span> Travel</option>
             </select>
           </div>
           <button type="submit" class="btn">Join Chat</button>
         </form>
       </main>
+      <div class="horizontal-line"><i class="fas fa-braille"></i></div>
     </div>
+    <script>
+      const form = document.querySelector("form");
+      const text = document.getElementById("username");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault;
+        if (/[^a-zA-Z0-9\-\/]/.test(text.value)) {
+          alert("Dont add symbols or spaces");
+          return false;
+        } else {
+          form.action = "chat.html";
+        }
+      });
+    </script>
+    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>

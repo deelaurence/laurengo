@@ -17,7 +17,7 @@ const io = socketio(server);
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const botName = 'ChatCord Bot';
+const botName = 'admin';
 
 
    
@@ -33,7 +33,7 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
+    socket.emit('message', formatMessage(botName, `you logged in as ${username}`));
 
     // Broadcast when a user connects
     socket.broadcast
@@ -60,7 +60,7 @@ io.on('connection', socket => {
     const user = getCurrentUser(socket.id);
 
     io.to(user.room).emit('message', formatMessage(user.username, msg));
- 
+    
    } catch (error) {
      console.log(error);
    } 

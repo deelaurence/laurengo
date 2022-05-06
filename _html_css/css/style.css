@@ -275,10 +275,12 @@ a {
 	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
+	
+	
 }
 
 .chat-header {
-	background: var(--dark-color-a);
+	background: #5f3594;
 	color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -287,14 +289,20 @@ a {
 	align-items: center;
 	justify-content: space-between;
 }
-
+.chat-header span{
+	opacity: 1;
+	transition: 1s;
+}
+.span2{
+opacity: 0;
+}
 .chat-main {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 }
 
 .chat-sidebar {
-	background: var(--dark-color-b);
+	background: white;
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
@@ -323,7 +331,7 @@ a {
 
 .chat-messages .message {
 	padding: 10px;
-	margin-bottom: 15px;
+	margin-bottom: 300px;
 	background-color: var(--light-color);
 	border-radius: 5px;
 }
@@ -333,7 +341,7 @@ a {
 	font-weight: bold;
 	color: var(--dark-color-b);
 	opacity: 0.7;
-	margin-bottom: 7px;
+	margin-bottom: 70px;
 }
 
 .chat-messages .message .meta span {
@@ -359,6 +367,7 @@ a {
 /* Join Page */
 .join-container {
 	max-width: 500px;
+
 	margin: auto;
 	margin-top: -100px;
 	color: #fff;
@@ -375,7 +384,7 @@ a {
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 15px;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 }
 .join-header>h1>i{
 	margin-right: 10px;
@@ -415,7 +424,8 @@ a {
 
 .join-main {
 	padding: 30px 40px;
-	background: var(--dark-color-b);
+	/* background: var(--dark-color-b); */
+	background-color: transparent;
 }
 
 .join-main p {
@@ -454,7 +464,7 @@ a {
 	margin-left: 50%;
 	transform: translate(-50%);
 	color: white;
-	background-color: #e83a8c;
+	background-color:orange;
 	font-family: poppins;
 	border-bottom-right-radius: 50px;
 	border-bottom-left-radius: 300px;
@@ -464,7 +474,7 @@ a {
 	}
 
 #username, #room{
-	background-color: var(--dark-color-b);
+	background-color: transparent;
 	border-top:none;
 	border-left: none;
 	border-right: none;
