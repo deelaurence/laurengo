@@ -845,14 +845,3 @@ position: relative;
 	
 }
 
-@media (max-height:600px) {
-	.chat-form-container{
-		position: relative;
-		bottom: 5px;
-	}	
-}
-@media (min-height:650px) {
-	.chat-messages{
-		padding-bottom: 50px;
-	}
-}
