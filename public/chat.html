@@ -35,14 +35,18 @@
         <h1><i class="fab fa-cloudsmith"></i></h1>
         <h6> <span>chat</span> on the go!</h6>
         <p class="info"><i class="fas fa-users"></i></p>
+        
+        <a id="mute-btn" class="mute"><i class="fas fa-volume-mute"></i></a>
+        <p class="mute-info"></p>
         <a id="leave-btn" class="btn"><i class="fas fa-sign-out-alt"></i></a>
+       
       </header>
       <main class="chat-main">
 
         <div class="chat-sidebar">
           <h3></h3>
           <h2 id="room-name"></h2>
-          <h3>online<span><i class="fas fa-circle"></i></span></h3>
+          <h3 class="online">online<span id="online"></span></h3>
           <ul id="users"></ul>
         </div>
         <div id="blur-bg">
@@ -53,12 +57,11 @@
           <input
             id="msg"
             type="text"
-            onkeydown="playPad()"
             placeholder="Enter Message"
             required
             autocomplete="off"
           />
-          <button class="btn"><i class="fas fa-paper-plane"></i></button>
+          <button id='send-btn' class="btn"><i class="fas fa-paper-plane"></i></button>
         </form>
       </div>
     </div>
@@ -74,13 +77,19 @@
     <script>
       let words=['chat','click','meet']
       let span=document.querySelector('span')
+      let onlineBlink=document.querySelector('#online')
       setInterval(() => {
         let ranNum=Math.floor(Math.random()*3)
         span.innerText=words[ranNum]
       }, 4000);  
       setInterval(() => {
         span.classList.toggle('span2')
+        
         }, 2000);
+        setInterval(() => {
+          
+          onlineBlink.classList.toggle('blink')
+        }, 500);
       //   setInterval(() => {
       //   span.innerText='chat'
       // }, 2000);

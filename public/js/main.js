@@ -124,6 +124,26 @@ else{
 
 }
 
+let muteBtn = document.querySelector('.mute')
+let muteInfo=document.querySelector('.mute-info')
+
+muteBtn.addEventListener('click',()=>{
+  muteBtn.style.color='#63bb63'
+  msgIn.muted=true;
+  msgOut.muted=true;
+  muteInfo.innerHTML="double click to unmute"
+  
+})
+
+muteBtn.addEventListener('dblclick',()=>{
+  muteBtn.style.color='white'
+  muteInfo.innerHTML=''
+  msgIn.muted=false;
+  msgOut.muted=false;
+})
+
+
+
 
 // Add room name to DOM
 function outputRoomName(room) {
@@ -155,6 +175,7 @@ let sideBar = document.querySelector('.chat-sidebar')
 let body = document.querySelector('#blur-bg')
 info.addEventListener('click',()=>{
 body.classList.toggle('blur')
+document.getElementById('send-btn').classList.toggle('blur')
 sideBar.classList.toggle('chat-sidebar2')
 })
 
