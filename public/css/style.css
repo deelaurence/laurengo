@@ -323,21 +323,22 @@ a {
 	max-height: 80vh;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	box-shadow: 1px 1px 20px rgba(71, 71, 71, 0.466);	
-	border-radius: 20px;
+	/* box-shadow: 1px 1px 20px rgba(71, 71, 71, 0.466);	 */
+	/* border-radius: 20px; */
 	
 	/* overflow: hidden; */
 }
 
 .chat-header {
 	background:var(--dark-color-a);
+	
 	color: #fff;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
+	/* border-top-left-radius: 20px;
+	border-top-right-radius: 20px; */
 	padding: 10px;
 	display: flex;
 	width: 100%;
-	
+	border-radius: 5px;
 	align-items: center;
 	justify-content: space-around;
 
@@ -580,9 +581,7 @@ position: relative;
 	box-shadow: 1px 1px 10px grey;
 	transition: .2s;
 }
-#chat-form>button:hover{
-	font-size: .2rem;
-}
+
 /* Join Page */
 .join-container {
 	max-width: 500px;
@@ -849,7 +848,7 @@ position: relative;
 @media (max-height:600px) {
 	.chat-form-container{
 		position: relative;
-		bottom: 20px;
+		bottom: 5px;
 	}	
 }
 @media (min-height:650px) {
