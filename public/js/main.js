@@ -101,11 +101,12 @@ let hero =document.getElementById('username')
      console.log(window.location.search);
      let hasText = window.location.search.includes(message.username)
 if(hasText){
-  div.style.backgroundColor="pink";
+  div.style.backgroundColor=" rgb(255, 225, 230)";
   // div.style.marginLeft='65%';
   div.style.position='relative';
   div.style.left='100%';
-  
+  div.style.borderTopLeftRadius='50px'
+  div.style.borderTopRightRadius='0'
 	div.style.transform='translateX(-100%)';
   msgIn.play()
 }
