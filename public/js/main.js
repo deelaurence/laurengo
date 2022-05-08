@@ -105,7 +105,7 @@ if(hasText){
   // div.style.marginLeft='65%';
   div.style.position='relative';
   div.style.left='100%';
-  div.style.borderTopLeftRadius='50px'
+  div.style.borderTopLeftRadius='15px'
   div.style.borderTopRightRadius='0'
 	div.style.transform='translateX(-100%)';
   msgIn.play()
