@@ -98,7 +98,7 @@ function outputMessage(message) {
     div.style.backgroundColor = " rgb(255, 225, 230)";
     // div.style.marginLeft='65%';
     div.style.position = "relative";
-    div.style.left = "100%";
+    div.style.left = "83%";
     div.style.borderTopLeftRadius = "15px";
     div.style.borderTopRightRadius = "0";
     div.style.transform = "translateX(-100%)";
