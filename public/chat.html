@@ -9,17 +9,22 @@
       integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+    
     <link rel="stylesheet" href="css/style.css" />
     <title></title>
   </head>
   <body
-  style="background-color: #ffffff;background-size: 8rem; background-image: url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/pattern-18.svg');"></body>
-    <div
+  style="min-height: 100vh; background-size: 8rem;background-repeat: no-repeat; background-size: cover; background: linear-gradient(white,#b1e2ec77);">
+  <!-- <h1 class="large-text" style="font-size: 5rem;bottom: 0; position: absolute; color: orangered; padding: 10px; text-align: left; overflow: hidden;">LAURENGO</h1>   -->
+  <!-- <h1 style="font-size: 7rem; position: absolute; bottom: 50px; padding: 10px; text-align: left;">chat on the go</h1>   -->
+  <div
       class="chat-container"
       style="
         background-color: #ffffff;
-        background-size: 8rem;
-        background-image: url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/pattern-18.svg');"
+        background-size: 8rem;"
     >
     <audio id="message-in">
       <source src="message-out.mp3" type="audio/mp3">
@@ -41,7 +46,8 @@
         <a id="leave-btn" class="btn"><i class="fas fa-sign-out-alt"></i></a>
        
       </header>
-      <main class="chat-main">
+      <main class="chat-main" 
+      style= " background-size: 8rem; border-radius: 0px; background-image:url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/pattern-18.svg');">
 
         <div class="chat-sidebar">
           <h3></h3>
@@ -52,7 +58,7 @@
         <div id="blur-bg">
         <div class="chat-messages"></div>
       </main>
-      <div class="chat-form-container">
+      <div class="chat-form-container" >
         <form id="chat-form">
           <input
             id="msg"
@@ -87,9 +93,6 @@
         
         }, 2000);
         
-      //   setInterval(() => {
-      //   span.innerText='chat'
-      // }, 2000);
       
     </script>
     
