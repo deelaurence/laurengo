@@ -108,7 +108,7 @@ function outputMessage(message) {
     div.style.backgroundColor = "rgba(257,257,257,.7)";
     div.style.left = "50%";
     div.style.width = "50%";
-    div.style.marginLeft = "0"
+    div.style.marginLeft = "0";
     div.style.textAlign = "center";
     div.style.transform = "translateX(-50%)";
     console.log("admin");
